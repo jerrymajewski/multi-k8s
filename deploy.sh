@@ -6,9 +6,9 @@ docker push jerrymajewski/multi-client:latest
 docker push jerrymajewski/multi-server:latest
 docker push jerrymajewski/multi-worker:latest
 
-docker push jerrymajewski/multi-client:SHA
-docker push jerrymajewski/multi-server:SHA
-docker push jerrymajewski/multi-worker:SHA
+docker push jerrymajewski/multi-client:$SHA
+docker push jerrymajewski/multi-server:$SHA
+docker push jerrymajewski/multi-worker:$SHA
 
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=jerrymajewski/multi-server:$SHA
